@@ -39,7 +39,6 @@ require_once(__DIR__ . '/../../lib.php');
  */
 class semindependent extends base_automatic {
 
-
     /**
      * Checks the course and returns a repsonse, which tells if the course should be further processed.
      * @param $course object to be processed.
@@ -76,16 +75,8 @@ class semindependent extends base_automatic {
     }
 
     public function extend_add_instance_form_definition($mform) {
-        $mform->addElement('checkbox', 'include', get_string('include', 'lifecycletrigger_semindependent'));
+        $mform->addElement('advcheckbox', 'include', get_string('include', 'lifecycletrigger_semindependent'));
         $mform->addHelpButton('include', 'include', 'lifecycletrigger_semindependent');
-    }
-
-    public function extend_add_instance_form_definition_after_data($mform, $settings) {
-        if (is_array($settings) && array_key_exists('include', $settings)) {
-            $default = $settings['include'];
-        } else {
-            $default = true;
-        }
-        $mform->setDefault('include', $default);
+        $mform->setType('include', PARAM_BOOL);
     }
 }
