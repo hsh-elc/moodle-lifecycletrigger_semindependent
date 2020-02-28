@@ -25,5 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version  = 2017050901;
+$plugin->version  = 2020022800;
 $plugin->component = 'lifecycletrigger_semindependent';
+$plugin->dependencies = array(
+    'tool_lifecycle' => 2019102900
+);
