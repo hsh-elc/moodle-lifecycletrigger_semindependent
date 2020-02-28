@@ -17,7 +17,7 @@
 /**
  * Life Cycle Semester independent Trigger
  *
- * @package tool_lifecycle_trigger
+ * @package lifecycletrigger
  * @subpackage semindependent
  * @copyright  2019 Tobias Reischmann WWU
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -25,5 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version  = 2017050901;
+$plugin->version  = 2020022800;
 $plugin->component = 'lifecycletrigger_semindependent';
+$plugin->dependencies = array(
+    'tool_lifecycle' => 2019102900
+);

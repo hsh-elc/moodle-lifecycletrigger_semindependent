@@ -18,15 +18,15 @@
  * Interface for the subplugintype trigger
  * It has to be implemented by all subplugins.
  *
- * @package tool_lifecycle_trigger
+ * @package lifecycletrigger
  * @subpackage semindependent
  * @copyright  2019 Tobias Reischmann WWU
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 namespace tool_lifecycle\trigger;
 
-use tool_lifecycle\manager\settings_manager;
-use tool_lifecycle\response\trigger_response;
+use tool_lifecycle\local\manager\settings_manager;
+use tool_lifecycle\local\response\trigger_response;
 use tool_lifecycle\settings_type;
 
 defined('MOODLE_INTERNAL') || die();
@@ -35,7 +35,7 @@ require_once(__DIR__ . '/../../lib.php');
 
 /**
  * Class which implements the basic methods necessary for a lifecycle trigger subplugin
- * @package tool_lifecycle_trigger
+ * @package lifecycletrigger
  */
 class semindependent extends base_automatic {
 
